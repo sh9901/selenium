@@ -92,7 +92,7 @@ namespace OpenQA.Selenium
             driver.Url = javascriptPage;
 
             IWebElement textbox = driver.FindElement(By.Id("keyUp"));
-            textbox.SendKeys("a@#$ç.ó");
+            textbox.SendKeys("a@#$??");
             textbox.Clear();
             Assert.AreEqual("", textbox.GetAttribute("value"));
         }
@@ -103,7 +103,7 @@ namespace OpenQA.Selenium
             driver.Url = javascriptPage;
 
             IWebElement textbox = driver.FindElement(By.Id("keyUp"));
-            textbox.SendKeys("a@#$ç.ó");
+            textbox.SendKeys("a@#$??");
             textbox.Clear();
             Assert.AreEqual("", textbox.GetAttribute("value"));
         }
@@ -114,8 +114,8 @@ namespace OpenQA.Selenium
             driver.Url = javascriptPage;
 
             IWebElement textbox = driver.FindElement(By.Id("keyUp"));
-            textbox.SendKeys("a@#$ç.ó");
-            Assert.AreEqual("a@#$ç.ó", textbox.GetAttribute("value"));
+            textbox.SendKeys("a@#$??");
+            Assert.AreEqual("a@#$??", textbox.GetAttribute("value"));
         }
 
         [Test]
